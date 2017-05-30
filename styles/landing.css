@@ -1,0 +1,101 @@
+body.landing {
+    background-color: #FFF;
+}
+.hero-content {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../assets/images/aria-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.hero-content .container {
+    width: 80%;
+}
+.hero-content .hero-title {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-tranasform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    /*text-shadow: 1px 1px 0px #000;*/
+    line-height: 0;
+}
+.hero-content p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    position: absolute;
+    top: 60%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-tranasform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    /*text-shadow: 1px 1px 0px #000;*/
+    line-height: 0;
+}
+.selling-points {
+    position: relative;
+    display: table;
+    /*width: 100%;*/
+}
+.point {
+    /*display: table-cell;*/
+    position: relative;
+    width: 33.3%;
+    padding: 2rem;
+    text-align: center;
+}
+.point .point-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h5 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 1.67em;
+}
+.icon {
+    height: 160px;
+    width: 160px;
+    background-color: #1F4E65;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: #FFF;
+    font-size: 4rem;
+    text-shadow:
+        1px 1px 0px #122C38,
+        2px 2px 0px #122C38,
+        3px 3px 0px #122C38,
+        4px 4px 0px #122C38,
+        5px 5px 0px #122C38,
+        6px 6px 0px #122C38,
+        7px 7px 0px #122C38,
+        8px 8px 0px #122C38,
+        9px 9px 0px #122C38,
+        10px 10px 0px #122C38;
+}
+.ion-ios-heart, .ion-headphone, .ion-loop {
+    padding-top: 45px;
+    position: relative;
+    display: block;
+}

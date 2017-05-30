@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 html {
     height: 100%;
     font-size: 100%;
@@ -7,11 +12,8 @@ body {
     color: #000;
     min-height: 100%;
 }
-body.landing {
-    background-color: #FFF;
-}
 /* GRID */
-.container {
+/*.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -25,7 +27,7 @@ body.landing {
 }
 .container:after {
   clear: both;
-}
+}*/
 .navbar .container {
     width: 80%;
     padding-left: 0;
@@ -42,104 +44,28 @@ body.landing {
     left: 2rem;
     width: 110px;
 }
-.hero-content {
-    position: relative;
-    min-height: 100vh;
-    background-image: url(../assets/images/aria-hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+/* Medium and small screens (640px) */
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
 }
-.hero-content .container {
-    width: 80%;
+@media (min-width: 640px) {
+    html { font-size: 112%; }
 }
-.hero-content .hero-title {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    position: absolute;
-    top: 45%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-tranasform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: center;
-    color: #FFF;
-    font-size: 4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    /*text-shadow: 1px 1px 0px #000;*/
-    line-height: 0;
-}
-.hero-content p {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    position: absolute;
-    top: 55%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-tranasform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: center;
-    color: #FFF;
-    font-size: 2rem;
-    font-weight: 200;
-    font-style: italic;
-    /*text-shadow: 1px 1px 0px #000;*/
-    line-height: 0;
-}
-.selling-points {
-    position: relative;
-    display: table;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.point {
-    display: table-cell;
-    position: relative;
-    width: 33.3%;
-    padding: 2rem;
-    text-align: center;
-}
-.point .point-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-h5 {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    margin-top: 1.67em;
-}
-.icon {
-    height: 160px;
-    width: 160px;
-    background-color: #1F4E65;
-    border-radius: 50%;
-    display: block;
-    position: relative;
-    margin: auto;
-    text-align: center;
-    color: #FFF;
-    font-size: 4rem;
-    text-shadow:
-        1px 1px 0px #122C38,
-        2px 2px 0px #122C38,
-        3px 3px 0px #122C38,
-        4px 4px 0px #122C38,
-        5px 5px 0px #122C38,
-        6px 6px 0px #122C38,
-        7px 7px 0px #122C38,
-        8px 8px 0px #122C38,
-        9px 9px 0px #122C38,
-        10px 10px 0px #122C38;
-}
-.ion-ios-heart, .ion-headphone, .ion-loop {
-    padding-top: 50px;
-    position: relative;
-    display: block;
+
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .column .full { width: 100%; }
+    .column .two-thirds { width: 66.7%; }
+    .column .half { width: 50%; }
+    .column .third { width: 33.3%; }
+    .column .fourth { width: 25%; }
+    .column .flow-opposite { float: right; }
+/* Large screens (1024px) */
+@media (min-width: 1024px) {
+    html { font-size: 120%; }
 }
