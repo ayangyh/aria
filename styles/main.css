@@ -41,6 +41,14 @@ body {
 .navbar .left {
     float: left;
 }
+.navbar .right {
+    height: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar .right:active {
+    background-color: #FFF;
+}
 .navbar img {
     position: relative;
     width: 100px;
@@ -48,11 +56,13 @@ body {
 }
 .navbar .links-container {
     position: absolute;
-    top: 27px;
+    top: 0;
     right: 0;
     color: #FFF;
 }
 .links-container .navbar-link {
+    position: relative;
+    top: 25px;
     vertical-align: middle;
     color: #FFF;
     font-size: 0.625rem;
@@ -65,11 +75,18 @@ body {
 .links-container .navbar-link:hover {
     color: #CC2F5A;
 }
-/* Medium and small screens (640px) */
+.links-container .navbar-link:active {
+    color: rgb(233,50,117);
+}
 .container {
     margin: 0 auto;
     max-width: 64rem;
 }
+.container.narrow {
+    max-width: 56rem;
+}
+
+/* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 112%; }
 }
@@ -86,6 +103,7 @@ body {
     .column .third { width: 33.3%; }
     .column .fourth { width: 25%; }
     .column .flow-opposite { float: right;}
+
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
     html { font-size: 120%; }

@@ -21,9 +21,11 @@ body.collection {
     font-size: 1rem;
     font-weight: 400;
     color: #FFF;
+    text-transform: uppercase;
 }
 .collection-album-container .caption p a {
     color: #FFF;
+    text-decoration: none;
 }
 .collection-album-container .caption p a .album-name {
     color: #FFF;
