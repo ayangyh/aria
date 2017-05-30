@@ -9,9 +9,6 @@ body.landing {
     background-position: center center;
     background-size: cover;
 }
-.hero-content .container {
-    width: 80%;
-}
 .hero-content .hero-title {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
@@ -25,7 +22,7 @@ body.landing {
     text-align: center;
     color: #FFF;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: .5rem;
     /*text-shadow: 1px 1px 0px #000;*/
@@ -35,7 +32,7 @@ body.landing {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     position: absolute;
-    top: 60%;
+    top: 58%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-tranasform: translateY(-50%);
@@ -74,7 +71,8 @@ h5 {
 .icon {
     height: 160px;
     width: 160px;
-    background-color: #1F4E65;
+    /*background-color: #1F4E65;*/
+    background-color: #CC2F5A;
     border-radius: 50%;
     display: block;
     position: relative;
@@ -83,16 +81,16 @@ h5 {
     color: #FFF;
     font-size: 4rem;
     text-shadow:
-        1px 1px 0px #122C38,
-        2px 2px 0px #122C38,
-        3px 3px 0px #122C38,
-        4px 4px 0px #122C38,
-        5px 5px 0px #122C38,
-        6px 6px 0px #122C38,
-        7px 7px 0px #122C38,
-        8px 8px 0px #122C38,
-        9px 9px 0px #122C38,
-        10px 10px 0px #122C38;
+        1px 1px 0px #420E19,
+        2px 2px 0px #420E19,
+        3px 3px 0px #420E19,
+        4px 4px 0px #420E19,
+        5px 5px 0px #420E19,
+        6px 6px 0px #420E19,
+        7px 7px 0px #420E19,
+        8px 8px 0px #420E19,
+        9px 9px 0px #420E19,
+        10px 10px 0px #420E19;
 }
 .ion-ios-heart, .ion-headphone, .ion-loop {
     padding-top: 45px;

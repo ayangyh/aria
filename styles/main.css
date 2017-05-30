@@ -28,21 +28,42 @@ body {
 .container:after {
   clear: both;
 }*/
-.navbar .container {
-    width: 80%;
-    padding-left: 0;
-    padding-right: 0;
+.header-nav {
+    background-color: rgba(0,0,0,.7);
+    height: 75px;
 }
 .navbar {
-    padding-top: 0.75rem;
+    position: relative;
+    padding-top: 0.85rem;
     padding-bottom: 0.5rem;
-    background-color: rgba(0,0,0,.7);
+    z-index: 1;
 }
-.navbar .logo {
-    /*position: relative;*/
-    /*margin-left: 4rem;*/
-    left: 2rem;
-    width: 110px;
+.navbar .left {
+    float: left;
+}
+.navbar img {
+    position: relative;
+    width: 100px;
+    cursor: pointer;
+}
+.navbar .links-container {
+    position: absolute;
+    top: 27px;
+    right: 0;
+    color: #FFF;
+}
+.links-container .navbar-link {
+    vertical-align: middle;
+    color: #FFF;
+    font-size: 0.625rem;
+    letter-spacing: 0.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.links-container .navbar-link:hover {
+    color: #CC2F5A;
 }
 /* Medium and small screens (640px) */
 .container {
@@ -68,6 +89,12 @@ body {
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
     html { font-size: 120%; }
+}
+.navbar .container {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
 }
 .clearfix::before,
 .clearfix::after {
