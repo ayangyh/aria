@@ -10,9 +10,11 @@ body.collection {
 }
 .collection-album-container {
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    /*padding-left: 2rem;
+    padding-right: 2rem;*/
 }
 .collection-album-container .caption {
     margin-top: 10px;
@@ -23,12 +25,30 @@ body.collection {
     color: #FFF;
 }
 .collection-album-container .caption p a {
-    color: #FFF;
+    /*color: #FFF;*/
     text-decoration: none;
 }
-.collection-album-container .caption p a .album-name {
+.collection-album-container .caption .album-name {
     color: #FFF;
+}
+.collection-album-container .caption .album-artist {
+    color: #585858;
+    text-transform: uppercase;
+    font-size: .75rem;
 }
 .collection-album-container img {
     width: 80%;
+}
+@media (min-width: 320px) {
+    .album-covers {
+        padding-top: 100px;
+    }
+    .album-covers .column.fourth {
+        width: 100%;
+    }
+}
+@media (min-width: 640px) {
+    .album-covers .column.fourth {
+        width: 25%;
+    }
 }

@@ -5,12 +5,6 @@ body.album {
     background-position: center center;
     background-size: cover;
 }
-.album-cover-art {
-    position: relative;
-    left: 20%;
-    margin-top: 1rem;
-    width: 60%;
-}
 .album-view-details {
     position: relative;
     top: 1.5rem;
@@ -34,36 +28,92 @@ body.album {
     border-collapse: collapse;
     color: #FFF;
 }
-.album-view-song-item {
-    height: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.song-item-number {
-    width: 5%;
-}
-.song-item-title {
-    width: 85%;
-    font-weight: 700;
-}
 .song-item-duration {
     width: 5%;
 }
 h5 {
     font-weight: 200;
 }
-@media (max-width: 640px) and (min-width: 320px) {
-    .album-view-details {
-        text-align: center;
-    }
+
+@media (min-width: 320px) {
     .album-view-title {
         margin-top: 0;
+        margin-bottom: 0;
+    }
+    .album-view .column.half {
+        width: 100%;
+    }
+    .album .container.narrow {
+        padding-top: 100px;
+    }
+    .album-cover-art {
+        position: relative;
+        left: 20%;
+        margin-top: 1rem;
+        width: 60%;
+    }
+    .album-view-details {
+        text-align: center;
+        position: relative;
+        top: 0;
+        padding: 1rem;
+        color: #FFF;
+        margin-top: 0;
+    }
+    .album-view h3 {
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+    }
+    .album-view h5 {
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+    }
+    .album-view-song-item {
+        height: 2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .album-view .no-mobile {
+        display: none;
+    }
+    .song-item-number {
+        width: 5%;
+        padding-right: 15px;
+    }
+    .song-item-title {
+        width: 85%;
+        font-weight: 400;
     }
 }
-@media (max-width: 1024px) and (min-width: 320px) {
+@media (min-width: 640px) {
     .album-view-song-list {
         position: relative;
         top: 1rem;
         width: 80%;
         margin: auto;
+    }
+    .album-view .column.half {
+        width: 50%;
+    }
+    .album-view-details {
+        top: 1.5rem;
+        margin-top: 3rem;
+        text-align: left;
+    }
+    .album-view h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .album-view h5 {
+        margin-top: 1.67rem;
+        margin-bottom: 1.67rem;
+    }
+    .album-view-song-item {
+        height: 3rem;
+    }
+    .album-view .no-mobile {
+        display: block;
+    }
+    .song-item-number {
+        padding-right: 0;
     }
 }

@@ -28,68 +28,36 @@ body {
 .container:after {
   clear: both;
 }*/
-.header-nav {
-    background-color: rgba(0,0,0,.7);
-    height: 75px;
-}
-.navbar {
-    position: relative;
-    padding-top: 0.85rem;
-    padding-bottom: 0.5rem;
-    z-index: 1;
-}
-.navbar .left {
-    float: left;
-}
-.navbar .right {
-    height: 75px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.navbar .right:active {
-    background-color: #FFF;
-}
-.navbar img {
-    position: relative;
-    width: 100px;
-    cursor: pointer;
-}
-.navbar .links-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #FFF;
-}
-.links-container .navbar-link {
-    position: relative;
-    top: 25px;
-    vertical-align: middle;
-    color: #FFF;
-    font-size: 0.625rem;
-    letter-spacing: 0.15rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-}
-.links-container .navbar-link:hover {
-    color: #CC2F5A;
-}
-.links-container .navbar-link:active {
-    color: rgb(233,50,117);
-}
+
 .container {
     margin: 0 auto;
     max-width: 64rem;
 }
 .container.narrow {
+    /*padding-top: 100px;*/
     max-width: 56rem;
 }
-
+/* Mobile screens (320px) */
+@media (min-width: 320px) {
+    html { font-size: 150%; }
+    }
+    .navbar {
+        width: 90%;
+    }
+    .no-mobile {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .navbar .logo-symbol img {
+        width: 32px;
+    }
+}
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 112%; }
-}
+    }
 
     .column {
         float: left;
@@ -97,28 +65,92 @@ body {
         padding-right: 1rem;
     }
 
-    .column .full { width: 100%; }
-    .column .two-thirds { width: 66.7%; }
-    .column .half { width: 50%; }
-    .column .third { width: 33.3%; }
-    .column .fourth { width: 25%; }
-    .column .flow-opposite { float: right;}
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right;}
+
+    .header-nav {
+        background-color: rgba(0,0,0,.7);
+        height: 75px;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+    .navbar {
+        position: relative;
+        padding-top: 0.85rem;
+        padding-bottom: 0.5rem;
+        z-index: 1;
+    }
+    .navbar .left {
+        float: left;
+    }
+    .navbar .right {
+        height: 75px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .navbar .right:active {
+        background-color: #FFF;
+    }
+    .no-mobile {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+    .navbar .logo img {
+        position: relative;
+        width: 100px;
+        cursor: pointer;
+    }
+    .navbar .links-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #FFF;
+    }
+    .links-container .navbar-link {
+        position: relative;
+        top: 25px;
+        vertical-align: middle;
+        color: #FFF;
+        font-size: 0.625rem;
+        letter-spacing: 0.15rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .links-container .navbar-link:hover {
+        color: #CC2F5A;
+    }
+    .links-container .navbar-link:active {
+        color: rgb(233,50,117);
+    }
+}
+
+
 
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
     html { font-size: 120%; }
-}
-.navbar .container {
-    width: 90%;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: none;
-}
-.clearfix::before,
-.clearfix::after {
-    content: " ";
-    display: table;
-}
-.clearfix::after {
-    clear: both;
+
+    .navbar .container {
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+    }
+    .clearfix::before,
+    .clearfix::after {
+        content: " ";
+        display: table;
+    }
+    .clearfix::after {
+        clear: both;
+    }
 }
