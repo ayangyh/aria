@@ -56,6 +56,7 @@ h5 {
     position: relative;
     display: block;
 }
+
 @media (min-width: 320px) {
     .hero-content h1 {
         -webkit-margin-before: 0;
@@ -96,9 +97,20 @@ h5 {
     .point {
         /*display: table-cell;*/
         position: relative;
-        width: 33.3%;
+        /*width: 33.3%;*/
         padding: 1.5rem 2rem;
         text-align: center;
+        /*opacity: 0;*/
+        -webkit-transform: scaleX(0.9) scaleY(0.9) translateY(3rem);
+        -moz-transform: scaleX(0.9) scaleY(0.9) translateY(3rem);
+        transform: scaleX(0.9) scaleY(0.9) translateY(3rem);
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        -webkit-transition-delay: 0.2s;
+        -moz-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+
     }
 }
 @media (min-width: 640px) {
