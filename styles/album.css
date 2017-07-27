@@ -31,6 +31,24 @@ body.album {
 .song-item-duration {
     width: 5%;
 }
+.album-song-button {
+  text-align: center;
+  font-size: 14px;
+  background-color: #FFF;
+  color: rgb(210, 40, 123);
+  border-radius: 50% 50%;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+}
+.album-song-button:hover {
+  cursor: pointer;
+  color: #FFF;
+  background-color: rgb(210, 40, 123);
+}
+.album-song-button span {
+  line-height: 28px;
+}
 h5 {
     font-weight: 200;
 }
@@ -77,6 +95,7 @@ h5 {
     }
     .song-item-number {
         width: 5%;
+        min-width: 30px;
         padding-right: 15px;
     }
     .song-item-title {

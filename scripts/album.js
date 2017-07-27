@@ -42,10 +42,35 @@ var albumKendrick = {
   ]
 };
 
+var albumKhalid = {
+  title: 'American Teen',
+  artist: 'Khalid',
+  label: 'Right Hand Music Group',
+  year: '2017',
+  albumArtUrl: 'assets/images/album_covers/04.jpg',
+  songs: [
+    { title: 'American Teen', duration: '4:10' },
+    { title: 'Young Dumb & Broke', duration: '3:22' },
+    { title: 'Location', duration: '3:39' },
+    { title: 'Another Sad Love Song', duration: '4:04' },
+    { title: 'Saved', duration: '3:26' },
+    { title: 'Coaster', duration: '3:19' },
+    { title: '8TEEN', duration: '3:48' },
+    { title: 'Let\'s Go', duration: '3:24' },
+    { title: 'Hopeless', duration: '2:47' },
+    { title: 'Cold Blooded', duration: '3:27' },
+    { title: 'Winter', duration: '4:01' },
+    { title: 'Therapy', duration: '4:17' },
+    { title: 'Keep Me', duration: '4:36' },
+    { title: 'Shot Down', duration: '3:27' },
+    { title: 'Angels', duration: '2:50' },
+  ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
   var template =
     '<tr class="album-view-song-item">'
-  + ' <td class="song-item-number">' + songNumber + '</td>'
+  + ' <td class="song-item-number" data-song-number="' + songNumber + '">' +songNumber + '</td>'
   + ' <td class="song-item-title">' + songName + '</td>'
   + ' <td class="song-item-duration">' + songLength + '</td>'
   + '</tr>'
@@ -54,13 +79,13 @@ var createSongRow = function(songNumber, songName, songLength) {
   return template;
 };
 
-var setCurrentAlbum = function(album) {
-  var albumTitle = document.getElementsByClassName('album-view-title')[0];
-  var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-  var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-  var albumImage = document.getElementsByClassName('album-cover-art')[0];
-  var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
+var setCurrentAlbum = function(album) {
   albumTitle.firstChild.nodeValue = album.title;
   albumArtist.firstChild.nodeValue = album.artist;
   albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
@@ -73,6 +98,33 @@ var setCurrentAlbum = function(album) {
   }
 };
 
+var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+var songRows = document.getElementsByClassName('album-view-song-item');
+
+var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+
 window.onload = function() {
-  setCurrentAlbum(albumXx);
+    setCurrentAlbum(albumXx);
+
+    songListContainer.addEventListener('mouseover', function(event) {
+      if (event.target.parentElement.className === 'album-view-song-item') {
+          event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+      }
+    });
+
+    var albums = [albumXx, albumKendrick, albumKhalid];
+    var index = 1;
+    albumImage.addEventListener('click', function(event) {
+      setCurrentAlbum(albums[index]);
+      index++;
+      if (index == albums.length) {
+          index = 0;
+      }
+    });
+
+    for (var i = 0; i < songRows.length; i++) {
+      songRows[i].addEventListener('mouseleave', function(event) {
+        this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
+      });
+    }
 };
