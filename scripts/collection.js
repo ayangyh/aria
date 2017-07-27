@@ -13,7 +13,7 @@ var collectionItemTemplate =
 ;
 
 window.onload = function() {
-  
+
   var collectionContainer = document.getElementsByClassName('album-covers')[0];
 
   collectionContainer.innerHTML = '';
