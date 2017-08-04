@@ -99,14 +99,14 @@ var setCurrentAlbum = function(album) {
 
 // checkpoint 26: write a function that keeps traversing up the DOM upward until a
 // parent with specified class name is found
-var findParentByClassName = function(element, findParentName) {
+var findParentByClassName = function(element, targetClass) {
     if (element) {
-        var findParent = element.parentElement;
+        var currentParent = element.parentElement;
 
-        while (findParent.className !== findParentName && findParent.className !== null) {
-          findParent = findParent.parentElement;
+        while (currentParent !== null && currentParent.className !== targetClass) {
+          currentParent = currentParent.parentElement;
           }
-        return findParent;
+        return currentParent;
     }
 };
 
@@ -114,15 +114,15 @@ var findParentByClassName = function(element, findParentName) {
 // a 'switch' statement that returns the element with the '.song-item-number' class
 var getSongItem = function(element) {
     switch(element.className) {
+    case "album-song-button":
+    case "ion-play":
+    case "ion-pause":
+      return findParentByClassName(element, "song-item-number");
+    case "album-view-song-item":
+      return element.querySelector(".song-item-number");
       case "song-item-title":
       case "song-item-duration":
-        return findParentByClassName(element, "song-item-number").querySelector(".song-item-number");
-      case "album-song-button":
-      case "ion-play":
-      case "ion-pause":
-        return findParentByClassName(element, "song-item-number");
-      case "album-view-song-item":
-        return element.querySelector(".song-item-number");
+        return findParentByClassName(element, "album-view-song-item").querySelector(".song-item-number");
       case "song-item-number":
         return element;
       default:
@@ -162,15 +162,14 @@ window.onload = function() {
     setCurrentAlbum(albumXx);
 
     songListContainer.addEventListener('mouseover', function(event) {
-      if (event.target.parentElement.className === 'album-view-song-item') {
-          // event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
-          var songItem = getSongItem(event.target);
+         if (event.target.parentElement.className === 'album-view-song-item') {
+             var songItem = getSongItem(event.target);
 
-          if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
-              songItem.innerHTML = playButtonTemplate;
-          }
-      }
-    });
+             if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
+                 songItem.innerHTML = playButtonTemplate;
+             }
+         }
+     });
 
     var albums = [albumXx, albumKendrick, albumKhalid];
     var index = 1;
