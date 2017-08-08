@@ -1,24 +1,27 @@
-var collectionItemTemplate =
-'<div class="collection-album-container column fourth">'
-+ '    <img src="assets/images/album_covers/01.jpg"/>'
-+ '    <div class="collection-album-info caption">'
-+ '        <p>'
-+ '            <a class="album-name" href="album.html">I See You</a>'
-+ '            <br/>'
-+ '            <a class="album-artist" href="album.html">The xx</a>'
-+ '            <br/>'
-+ '        </p>'
-+ '    </div>'
-+ '</div>'
-;
+var buildCollectionItemTemplate = function() {
+    var template =
+      '<div class="collection-album-container column fourth">'
+    + '    <img src="assets/images/album_covers/01.jpg"/>'
+    + '    <div class="collection-album-info caption">'
+    + '        <p>'
+    + '            <a class="album-name" href="album.html">I See You</a>'
+    + '            <br/>'
+    + '            <a class="album-artist" href="album.html">The xx</a>'
+    + '            <br/>'
+    + '        </p>'
+    + '    </div>'
+    + '</div>'
+    ;
 
-window.onload = function() {
+    return $(template);
+};
 
-  var collectionContainer = document.getElementsByClassName('album-covers')[0];
+$(window).load(function() {
 
-  collectionContainer.innerHTML = '';
+    var $collectionContainer = $(".album-covers");
+    $collectionContainer.empty();
 
-  for (var i = 0; i < 12; i++) {
-    collectionContainer.innerHTML += collectionItemTemplate;
-  }
-}
+    var $newThumbnail = buildCollectionItemTemplate();
+    $collectionContainer.append($newThumbnail);
+
+});
