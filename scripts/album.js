@@ -155,6 +155,22 @@ var previousSong = function() {
     $lastSongInfo.html(lastSongNum);
 };
 
+var togglePlayFromPlayerBar = function() {
+    var $currentlyPlayingBox = getSongNumberCell(currentlyPlayingSongNumber);
+
+    // if (currentSoundFile !== null)
+
+    if (currentSoundFile.isPaused()) {
+        $currentlyPlayingBox.html(pauseButtonTemplate);
+        $(this).html(playerBarPauseButton);
+        currentSoundFile.play();
+    } else if (currentSoundFile) {
+        $currentlyPlayingBox.html(playButtonTemplate);
+        $(this).html(playerBarPlayButton);
+        currentSoundFile.pause();
+    }
+};
+
 var updatePlayerBarSong = function() {
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + ' - ' + currentAlbum.artist);
     $('.currently-playing .song-name').text(currentSongFromAlbum.title);
@@ -175,9 +191,11 @@ var currentVolume = 80;
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
+var $playButton = $('.main-controls .play-pause');
 
 $(document).ready(function() {
     setCurrentAlbum(albumKendrick);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
+    $playButton.click(togglePlayFromPlayerBar);
 });
