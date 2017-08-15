@@ -19,26 +19,26 @@ var albumXx = {
 };
 
 var albumKendrick = {
-    title: 'Damn',
+    title: 'DAMN.',
     artist: 'Kendrick Lamar',
     label: 'Top Dawg Entertainment',
     year: '2017',
     albumArtUrl: 'assets/images/album_covers/05.jpeg',
     songs: [
-    { title: 'Blood', duration: '1:58' },
-    { title: 'DNA', duration: '3:05' },
-    { title: 'Yah', duration: '2:40' },
-    { title: 'Element', duration: '3:28' },
-    { title: 'Feel', duration: '3:34' },
-    { title: 'Loyalty', duration: '3:47' },
-    { title: 'Pride', duration: '4:35' },
-    { title: 'Humble', duration: '2:57' },
-    { title: 'Lust', duration: '5:07' },
-    { title: 'Love', duration: '3:33' },
-    { title: 'XXX', duration: '4:14' },
-    { title: 'Fear', duration: '7:40' },
-    { title: 'God', duration: '4:08' },
-    { title: 'Duckworth', duration: '4:08' },
+    { title: 'BLOOD.', duration: '1:58', audioUrl: 'assets/music/01-kendrick_lamar-blood'},
+    { title: 'DNA.', duration: '3:05', audioUrl: 'assets/music/02-kendrick_lamar-dna' },
+    { title: 'YAH.', duration: '2:40', audioUrl: 'assets/music/03-kendrick_lamar-yah' },
+    { title: 'ELEMENT.', duration: '3:28', audioUrl: 'assets/music/04-kendrick_lamar-element' },
+    { title: 'FEEL.', duration: '3:34', audioUrl: 'assets/music/05-kendrick_lamar-feel' },
+    { title: 'LOYALTY.', duration: '3:47', audioUrl: 'assets/music/06-kendrick_lamar-loyalty_(feat._rihanna)' },
+    { title: 'PRIDE.', duration: '4:35', audioUrl: 'assets/music/07-kendrick_lamar-pride' },
+    { title: 'HUMBLE.', duration: '2:57', audioUrl: 'assets/music/08-kendrick_lamar-humble' },
+    { title: 'LUST.', duration: '5:07', audioUrl: 'assets/music/09-kendrick_lamar-lust' },
+    { title: 'LOVE.', duration: '3:33', audioUrl: 'assets/music/10-kendrick_lamar-love_(feat._zacari)' },
+    { title: 'XXX.', duration: '4:14', audioUrl: 'assets/music/11-kendrick_lamar-xxx_(feat._u2)' },
+    { title: 'FEAR.', duration: '7:40', audioUrl: 'assets/music/12-kendrick_lamar-fear' },
+    { title: 'GOD.', duration: '4:08', audioUrl: 'assets/music/13-kendrick_lamar-god' },
+    { title: 'DUCKWORTH.', duration: '4:08', audioUrl: 'assets/music/14-kendrick_lamar-duckworth' },
     ]
 };
 
