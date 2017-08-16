@@ -11,8 +11,16 @@ var setSong = function(songNumber) {
         preload: true
     });
 
+    var seek = function(time) {
+        if (currentSoundFile) {
+            currentSoundFile.setTime(time);
+        }
+    }
+
     setVolume(currentVolume);
 };
+
+
 
 var setVolume = function(volume) {
     if (currentSoundFile) {
